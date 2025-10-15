@@ -1,5 +1,14 @@
--- Create a table for the bookstore
+/*
+    alx_book_store.sql
+    This SQL script creates the 'alx_book_store' database and defines tables for books, authors, customers, orders, and order details.
+    Each table includes appropriate primary keys, foreign keys, and data types to support a relational bookstore schema.
+*/
 
+-- Create the database
+CREATE DATABASE IF NOT EXISTS alx_book_store;
+USE alx_book_store;
+
+-- Create a table for the bookstore schema
 -- Books: Stores information about books available in the bookstore.
 CREATE TABLE books (
     book_id INT PRIMARY KEY NOT NULL,
