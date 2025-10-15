@@ -1,5 +1,4 @@
 import mysql.connector
-from mysql.connector import Error
 
 try:
     # Connect to MySQL server (adjust host, user, password as needed)
@@ -15,9 +14,8 @@ try:
         cursor.close()
     else:
         print("Failed to connect to the MySQL server.")
-except Error as e:
+except mysql.connector.Error as e:
     print(f"Error while connecting to MySQL: {e}")
 finally:
     if 'connection' in locals() and connection.is_connected():
         connection.close()
-
